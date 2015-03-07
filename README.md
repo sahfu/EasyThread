@@ -27,6 +27,7 @@
 	} 
 ```
 ###Other Example -- LinkedBlockingQueue Performance Test
+```java
 	public class LinkedBlockingQueueTest {
 		private long start;
 		private long end;
@@ -71,4 +72,4 @@
 			EasyThread.run(LinkedBlockingQueueTest.class);
 		}
 	}
-```Java
+```
