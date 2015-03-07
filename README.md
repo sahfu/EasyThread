@@ -3,6 +3,7 @@
 [EasyThread v1.0](https://github.com/sahfu/EasyThread/releases/tag/1.0)
 #Example
 ### 一个简单的例子
+```java
 	public class SimpleExample { 
 		
 		@Threads
@@ -24,6 +25,7 @@
 			EasyThread.run(SimpleExample.class);
 		}
 	} 
+```
 ###Other Example -- LinkedBlockingQueue Performance Test
 	public class LinkedBlockingQueueTest {
 		private long start;
@@ -69,3 +71,4 @@
 			EasyThread.run(LinkedBlockingQueueTest.class);
 		}
 	}
+```Java
