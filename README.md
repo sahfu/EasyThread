@@ -1,5 +1,8 @@
 可以很方便地在一个类里面写多个线程的代码
+#Download
+[EasyThread v1.0](https://github.com/sahfu/EasyThread/releases/tag/1.0)
 #Example
+### 一个简单的例子
 	public class SimpleExample { 
 		
 		@Threads
@@ -21,7 +24,7 @@
 			EasyThread.run(SimpleExample.class);
 		}
 	} 
-#Other Example -- LinkedBlockingQueueTest Performance Test
+###Other Example -- LinkedBlockingQueue Performance Test
 	public class LinkedBlockingQueueTest {
 		private long start;
 		private long end;
