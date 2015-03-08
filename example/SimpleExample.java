@@ -29,8 +29,4 @@ public class SimpleExample {
 	public static void main(String[] args) {
 		EasyThread.run(SimpleExample.class);
 	}
-<<<<<<< HEAD
 }
-=======
-} 
->>>>>>> origin/master
