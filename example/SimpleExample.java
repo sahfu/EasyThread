@@ -1,18 +1,15 @@
-package org.test;
 
-import java.security.Timestamp;
-import java.sql.Time;
-
+import org.easythread.annotation.Threads;
 import org.easythread.core.EasyThread;
-import org.easythread.core.Threads;
 
 /**
- * 一个简单的实例
+ * 一个简单的实例,一只猫和一只狗隔一段叫一声
+ * 
  * @author cong
  *
  */
-public class SimpleExample { 
-	
+public class SimpleExample {
+
 	@Threads
 	public void dog() throws InterruptedException {
 		for (int i = 0; i < 5; i++) {
@@ -28,7 +25,8 @@ public class SimpleExample {
 			Thread.sleep(400L);
 		}
 	}
+
 	public static void main(String[] args) {
 		EasyThread.run(SimpleExample.class);
 	}
-} 
+}

@@ -1,15 +1,15 @@
-package org.test;
 
+import java.util.Queue;
 import java.util.Random;
-import java.util.concurrent.LinkedBlockingQueue;
 
+import org.easythread.annotation.ThreadAfter;
+import org.easythread.annotation.ThreadBefore;
+import org.easythread.annotation.Threads;
 import org.easythread.core.EasyThread;
-import org.easythread.core.ThreadAfter;
-import org.easythread.core.ThreadBefore;
-import org.easythread.core.Threads;
 
 /**
  * 测试LinkedBlockingQueue 多生产者多消费者的性能
+ * 
  * @author cong
  *
  */
@@ -17,7 +17,7 @@ public class LinkedBlockingQueueTest {
 	private long start;
 	private long end;
 
-	private static LinkedBlockingQueue<Integer> queue = new LinkedBlockingQueue<Integer>();
+	private static Queue<Integer> queue;
 
 	@ThreadBefore
 	public void before2() {
@@ -34,7 +34,6 @@ public class LinkedBlockingQueueTest {
 	@Threads(num = 2)
 	public void producer() {
 		Random random = new Random();
-
 		for (int i = 0; i < 100000; i++) {
 			queue.add(i);
 		}
@@ -52,8 +51,7 @@ public class LinkedBlockingQueueTest {
 		}
 	}
 
-	public static void main(String[] args) throws InstantiationException,
-			IllegalAccessException, InterruptedException {
+	public static void main(String[] args) {
 		EasyThread.run(LinkedBlockingQueueTest.class);
 	}
 }
