@@ -1,7 +1,3 @@
-package org.test;
-
-import java.security.Timestamp;
-import java.sql.Time;
 
 import org.easythread.core.EasyThread;
 import org.easythread.core.Threads;
