@@ -1,9 +1,12 @@
 可以很方便地在一个类里面写多个线程的代码
 #Download
-[EasyThread v1.0](https://github.com/sahfu/EasyThread/releases/tag/1.0)
+[EasyThread v1.1](https://github.com/sahfu/EasyThread/releases/download/v1.1/EasyThread.v1.1.jar)
 #Example
 ### 一个简单的例子
 ```java
+	/**
+	 * 一只猫和一只狗隔一段时间叫一声
+	 */
 	public class SimpleExample { 
 		
 		@Threads
@@ -26,7 +29,7 @@
 		}
 	} 
 ```
-###Other Example -- LinkedBlockingQueue Performance Test
+###Other Example -- LinkedBlockingQueue MPMC 性能测试
 ```java
 	public class LinkedBlockingQueueTest {
 		private long start;
